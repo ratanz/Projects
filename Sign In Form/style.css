@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #242424
+}
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 400px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent,
+            transparent,
+            #561f91 #329e99 #2e72bb);
+
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,
+            transparent,
+            transparent,
+            #92481a,
+            #22b99b,
+            #2c6c9a,
+            #2b32b7);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3;
+}
+
+.borderLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.borderLine::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #ad37a4, #b1349b, #892b8e);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+}
+
+.borderLine::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, rgb(62, 24, 151), rgb(95, 14, 95), rgb(24, 113, 154));
+    z-index: 1;
+    transform-origin: bottom right;
+    animation-delay: -4.5s;
+}
+
+
+@keyframes animate {  
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box form {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.box form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+}
+
+.box form .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+    color: white;
+}
+
+.box form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border-radius: 5px;
+    /* box-shadow: 1px 1px 15px 1px rgba(255, 255, 255, 0.279); */
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.box form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    pointer-events: none;
+    color: #ccc;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.box form .inputBox input:valid~span,
+.box form .inputBox input:focus~span {
+    color: rgb(198, 198, 198);
+    font-size: 0.75em;
+    transform: translatey(-34px);
+}
+
+.box form .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #0707075c;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.box form .inputBox input:valid~i,
+.box form .inputBox input:focus~i {
+    height: 44px;
+}
+
+.box form .links {
+    display: flex;
+    justify-content: center;
+    margin-top: -6px;
+}
+
+.box form .links a {
+    margin: 33px;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.box form .links a:hover,
+.box form .links a:nth-child(2) {
+color: #fff;
+}
+
+.box form input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 8px 5px;
+    border-radius: 10px;
+    background-color: #fdfdfdd1;
+    cursor: pointer;
+    font-size: 0.80em;
+    font-weight: bold;
+}
+
+.box form input[type="submit"]:active {
+    opacity: 0.9;
+}
