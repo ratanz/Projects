@@ -90,11 +90,11 @@ body {
     transform: translate3d(0px, 0px 20px);
 }
 
-.see-more:hover{
+.see-more:hover {
     transform: translate3d(0px, 0px 50px);
 }
 
-.date-box{
+.date-box {
     position: absolute;
     top: 75px;
     left: 25px;
@@ -113,7 +113,7 @@ body {
 }
 
 .date-box .month {
-    color:white;
+    color: white;
     font-size: 13px;
     font-weight: 700;
 }
@@ -124,21 +124,22 @@ body {
     color: rgb(0, 136, 255);
 }
 
-.card2{
+.card2 {
     filter: hue-rotate(150deg);
-  }
+}
 
-  .card3{
+.card3 {
     filter: hue-rotate(300deg);
-  }
+}
 
-  .card4{
+.card4 {
     filter: hue-rotate(90deg);
-  }
+}
 
-  .card5{
+.card5 {
     filter: hue-rotate(45deg);
-  }
-  .card6{
+}
+
+.card6 {
     filter: hue-rotate(200deg);
-  }
+}
