@@ -17,12 +17,6 @@ body {
     background-color: #EFEAE3;
 }
 
-#main {
-    /* height: 100%;
-    width: 100%; */
-    /* background-color: #EFEAE3; */
-}
-
 #page1 {
     min-height: 100vh;
     width: 100%;
@@ -111,8 +105,71 @@ nav {
 }
 
 #page1 video {
+    position: relative;
     border-radius: 30px;
     margin-top: 4vw;
     width: 100%;
+}
 
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 39vw;
+    right: 0;
+    top: 70vh;
+}
+
+#hero-1 {
+    width: 100%;
+    height: 100%;
+    background-color: #FE330A;
+    border-top-left-radius: 55%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
+#hero-2 {
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(#FE330A, #fe3b0a);
+    border-radius: 50%;
+    filter: blur(41px);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#hero-3 {
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(#FE330A, #fe3b0a);
+    border-radius: 50%;
+    filter: blur(41px);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(7%, -10%);
+    }
+    to {
+        transform: translate(-10%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(70%, -9%);
+    }
+    to {
+        transform: translate(-10%, 10%);
+    }
 }
