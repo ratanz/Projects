@@ -132,9 +132,9 @@ nav {
 #hero-2 {
     width: 30vw;
     height: 30vw;
-    background: linear-gradient(#FE330A, #fe3b0a);
+    background: linear-gradient(#FE330A, #fe5b0a);
     border-radius: 50%;
-    filter: blur(41px);
+    filter: blur(45px);
     position: absolute;
     animation-name: anime2;
     animation-duration: 3s;
@@ -145,9 +145,9 @@ nav {
 #hero-3 {
     width: 30vw;
     height: 30vw;
-    background: linear-gradient(#FE330A, #fe3b0a);
+    background: linear-gradient(#FE330A, #fe5b0a);
     border-radius: 50%;
-    filter: blur(41px);
+    filter: blur(45px);
     position: absolute;
     animation-name: anime1;
     animation-duration: 3s;
@@ -158,10 +158,10 @@ nav {
 
 @keyframes anime1 {
     from {
-        transform: translate(7%, -10%);
+        transform: translate(7%, -7%);
     }
     to {
-        transform: translate(-10%, 10%);
+        transform: translate(-17%, 4%);
     }
 }
 
