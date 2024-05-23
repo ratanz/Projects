@@ -275,7 +275,7 @@ nav {
     border-radius: 50%;
     position: absolute;
     background: linear-gradient(to top right, #fa2f06, #fc6023);
-    top: 57%;
+    top: 54%;
     left: 22%;
     filter: blur(35px);
     animation-name: circle2;
