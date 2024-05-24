@@ -269,6 +269,27 @@ nav {
     margin-top: 3vw;
 }
 
+#bottom-part3  {
+    
+}
+
+#bottom-part3 p  {
+    right: 71vw;
+    top: 10vw;
+    position: relative;
+
+}
+
+#bottom-part3 #sm {
+    width: 7px;
+    height: 7px;
+    background-color: #fa0606;
+    border-radius: 50%;
+    top: 14vw;
+    right: 72vw;
+    position: relative;
+}
+
 #page2 #circle-2 {
     height: 38vw;
     width: 38vw;
