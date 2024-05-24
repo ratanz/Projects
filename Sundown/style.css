@@ -298,7 +298,41 @@ nav {
 }
 
 #page3 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
+    padding: 4vw 0;
+   
 }
+
+.elem {
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.307);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.elem h2 {
+    font-size: 3vw ;
+    position: relative;
+    z-index: 2;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.3s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
