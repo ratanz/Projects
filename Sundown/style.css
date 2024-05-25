@@ -125,7 +125,7 @@ nav {
 
 #hero-shape {
     position: absolute;
-    width: 46vw;
+    width: 47vw;
     height: 39vw;
     right: 0;
     top: 70vh;
@@ -171,7 +171,7 @@ nav {
 
 @keyframes anime1 {
     from {
-        transform: translate(5%, -5%);
+        transform: translate(5%, -10%);
     }
 
     to {
