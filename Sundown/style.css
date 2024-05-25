@@ -9,6 +9,12 @@
     src: url(fonts/NeueHaasDisplayRoman.ttf);
 }
 
+@font-face {
+    font-family: neu;
+    font-weight: 300;
+    src: url(fonts/NeueHaasDisplayRoman.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -269,11 +275,8 @@ nav {
     margin-top: 3vw;
 }
 
-#bottom-part3  {
-    
-}
 
-#bottom-part3 p  {
+#bottom-part3 p {
     right: 71vw;
     top: 10vw;
     position: relative;
@@ -323,7 +326,7 @@ nav {
     width: 100%;
     background-color: #EFEAE3;
     padding: 4vw 0;
-   
+
 }
 
 .elem {
@@ -335,13 +338,35 @@ nav {
     display: flex;
     align-items: center;
     padding: 0 2vw;
+    justify-content: space-between;
 }
 
 .elem h2 {
-    font-size: 3vw ;
+    font-size: 3vw;
     position: relative;
     z-index: 2;
 }
+
+.elem .sm h6 {
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    font-family: "neu";
+    font-size: 0.89em;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #000000f5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.elem .sm1 {
+    font-weight: lighter;
+    font-size: 14px;
+    color: #00000099;
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 .overlay {
     height: 100%;
@@ -351,9 +376,22 @@ nav {
     left: 0;
     top: -100%;
     transition: all ease 0.3s;
+    cursor: pointer;
 }
 
 .elem:hover .overlay {
     top: 0;
 }
 
+#fixed-image {
+    width: 24vw;
+    height: 30vw;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
