@@ -400,6 +400,7 @@ nav {
     display: none;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.2s ease-in, opacity 0.2s ease-in-out;
 }
 
 #page4 {
@@ -415,7 +416,7 @@ nav {
 
 #footer {
     position: fixed;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     z-index: 9;
     bottom: 0;
@@ -425,6 +426,7 @@ nav {
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column;
+    padding: 1vw 3vw;
 }
 
 #footer h1 {
