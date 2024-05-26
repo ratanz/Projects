@@ -29,6 +29,12 @@ body {
     background-color: #EFEAE3;
 }
 
+#main {
+    /* background-color: black; */
+    position: relative;
+    z-index: 10;
+}
+
 #page1 {
     min-height: 100vh;
     width: 100%;
@@ -394,4 +400,92 @@ nav {
     display: none;
     background-size: cover;
     background-position: center;
+}
+
+#page4 {
+    height: 60vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+#page5 {
+    height: 100vh;
+    width: 100%;
+}
+
+#footer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 9;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#footer h1 {
+    font-size: 23vw;
+}
+
+#footer-div {
+    height: 25vh;
+    width: 100%;
+    background-color: red;
+}
+
+#text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#text,
+#text1 h1 {
+    color: white;
+    font-size: 2vw;
+    margin-left: 7vw;
+    margin-top: 3vw;
+
+}
+
+
+#text2 p {
+    color: rgba(253, 245, 245, 0.886);
+    font-size: 1vw;
+    margin-right: 16vw;
+    margin-top: 1vw;
+    font-size: 0.74em;
+    font-weight: 300;
+    margin-bottom: 21px;
+}
+
+#text2 span {
+    display: flex;
+    align-items: center;
+}
+
+#text2 span input {
+    width: 70%;
+    background-color: rgba(102, 96, 96, 0.119);
+    border-style: none;
+    border-bottom: 1px solid #dadada86;
+    height: 4vh;
+
+}
+
+#text2 input::placeholder {
+    color: #f0f0f0a2;
+    font-weight: lighter;
+    font-size: 1.3em;
+}
+
+#footer-bottom {
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
 }
