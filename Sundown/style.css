@@ -401,12 +401,39 @@ nav {
     background-size: cover;
     background-position: center;
     transition: background-image 0.2s ease-in, opacity 0.2s ease-in-out;
+    pointer-events: none;
 }
 
 #page4 {
-    height: 60vh;
+    height: 65vh;
     width: 100%;
     background-color: #EFEAE3;
+    padding: 10vw 2vw;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background: #EFEAE3;
+    border-left: 1px solid #818181;
+    height: fit-content;
+    width: 30%;
+}
+
+.swiper-slide img {
+    margin-left: 0.5vw;
+}
+
+.swiper-slide p {
+    font-weight: 300;
+    margin-left: 5px;
+    margin-top: 4px;
+    font-size: 1em;
+    word-spacing: 1px;
+    line-height: 1.4;
 }
 
 #page5 {
