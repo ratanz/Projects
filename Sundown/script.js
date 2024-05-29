@@ -34,9 +34,6 @@ function swiperAnimation() {
     });
 }
 
-swiperAnimation()
-page4Animation()
-
 function menuAnimation() {
 
     var menu = document.querySelector("nav h3")
@@ -56,4 +53,14 @@ function menuAnimation() {
     })
 }
 
+function loaderAnimation() {
+    var loader = document.querySelector("#loader")
+    setTimeout(function () {
+        loader.style.top = "-100%"
+    }, 4200);
+}
+
+swiperAnimation()
+page4Animation()
 menuAnimation()
+loaderAnimation()
