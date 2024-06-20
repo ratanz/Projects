@@ -1,0 +1,5 @@
+$env:DEBUG = "development:*"
+$env:NODE_ENV="development"
+
+setx NODE_ENV "development"
+setx DEBUG "development:*"
