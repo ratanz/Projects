@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const OwnerModel = require('../models/owner-model');
 const ownerModel = require('../models/owner-model');
 
 if (process.env.NODE_ENV === "development") {
@@ -26,8 +25,5 @@ if (process.env.NODE_ENV === "development") {
 router.get("/", function (req, res) {
     res.send("Owners route");
 });
-
-
-
 
 module.exports = router;
