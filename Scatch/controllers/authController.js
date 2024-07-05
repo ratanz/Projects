@@ -1,11 +1,9 @@
-
 const userModel = require('../models/user-model');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { generateToken } = require("../utils/generateToken")
 
 module.exports.registerUser = async function (req, res) {
-
     try {
         let { email, password, fullname } = req.body
 
@@ -14,7 +12,7 @@ module.exports.registerUser = async function (req, res) {
 
         bcrypt.genSalt(10, function (err, salt) {
             bcrypt.hash(password, salt, async function (err, hash) {
-                if (err) return res.send(err.message)
+                if (err) return res.status(500).send(err.message)
                 else {
                     let user = await userModel.create({
                         email,
@@ -24,7 +22,7 @@ module.exports.registerUser = async function (req, res) {
 
                     let token = generateToken(user)
                     res.cookie("token", token)
-                    res.send("user created succesfully")
+                    res.redirect("/shop")
                 }
             });
         });
@@ -42,18 +40,17 @@ module.exports.loginUser = async function (req, res) {
         if (!user) return res.status(400).send("User does not exist, please register.")
 
         bcrypt.compare(password, user.password, function (err, result) {
-            if (err) return res.send(err.message)
+            if (err) return res.status(500).send(err.message)
 
             if (result) {
                 let token = generateToken(user)
                 res.cookie("token", token)
-                res.send("login successful")
+                res.redirect("/shop")
             }
             else {
                 res.status(400).send("Email or password is incorrect.")
             }
-        }
-        );
+        });
     }
     catch (err) {
         res.status(500).send("Server error");

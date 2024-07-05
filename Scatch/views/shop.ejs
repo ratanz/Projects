@@ -4,21 +4,21 @@
             <div class="flex items-center gap-2">
                 <h3>sort by</h3>
                 <form action="/shop">
-                    <select class="border-[1px] px-2 py-1" name="sortby" id="">
+                    <select class="border-[1px] px-2 py-1 hover:bg-zinc-100 cursor-pointer" name="sortby" id="">
                         <option value="popular">Popular</option>
                         <option value="newest">Newest</option>
                     </select>
                 </form>
             </div>
             <div class="flex flex-col mt-20">
-                <a class="block w-fit mb-2" href="">New Collection</a>
-                <a class="block w-fit mb-2" href="">All Products</a>
-                <a class="block w-fit mb-2" href="">Discounted Products</a>
+                <a class="block w-fit mb-2 hover:text-blue-500" href="">New Collection</a>
+                <a class="block w-fit mb-2 hover:text-red-500" href="">All Products</a>
+                <a class="block w-fit mb-2 hover:text-green-500" href="">Discounted Products</a>
             </div>
             <div class="mt-32">
-                <a class="block w-fit mb-2" href="">Filter by :</a>
-                <a class="block w-fit mb-2" href="">Availability</a>
-                <a class="block w-fit mb-2" href="">Discount</a>
+                <a class="block w-fit mb-2 font-sans" href="">Filter by :</a>
+                <a class="block w-fit mb-2 hover:text-green-500" href="">Availability</a>
+                <a class="block w-fit mb-2 hover:text-red-500" href="">Discount</a>
             </div>
         </div>
         <div class="w-[75%] flex flex-col gap-5 h-screen">
@@ -38,7 +38,7 @@
                                 <h4>₹ <%= product.price %>
                                 </h4>
                             </div>
-                            <a class="w-7 h-7 flex items-center justify-center rounded-full bg-white" href="">
+                            <a class="w-7 h-7 flex items-center justify-center rounded-full bg-white" href="/addtocart/<%= product._id %>">
                                 <i class="ri-add-line"></i>
                             </a>
                         </div>
