@@ -12,7 +12,7 @@ const renderBoard = () => {
     board.forEach((row, rowIndex) => {
         row.forEach((square, colIndex) => {
             const squareElement = document.createElement("div");
-            squareElement.classList.add("square", (rowIndex + colIndex) % 2 === 0 ? "bg-amber-100" : "bg-yellow-800");
+            squareElement.classList.add("square", (rowIndex + colIndex) % 2 === 0 ? "bg-yellow-900" : "bg-orange-200");
             squareElement.classList.add("flex", "items-center", "justify-center");
 
             if (square) {
@@ -76,7 +76,8 @@ const handleMove = (source, target) => {
 const getPieceUnicode = (piece) => {
     const unicodePieces = {
         p: "♙", r: "♜", n: "♞", b: "♝", q: "♛", k: "♚",
-        P: "♙", R: "♖", N: "♘", B: "♗", Q: "♕", K: "♔"
+        P: "♙", R: "♜", N: "♞", B: "♝", Q: "♛", K: "♚",
+        
     };
     return unicodePieces[piece] || "";
 };
