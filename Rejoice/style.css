@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Bonny";
+  src: url("/fonts/Bonny-Variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url(fonts/Satoshi-Variable.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bonny";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.page1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #393939;
+  position: relative;
+}
+
+.cursor {
+  height: 7.5vw;
+  width: 7.5vw;
+  background-color: #ff5f38;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+#cursor h5 {
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+.page1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.page1-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 3vw;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+}
+
+nav h2 {
+  font-size: 1.5vw;
+  font-weight: 300;
+}
+
+nav h4 {
+  font-size: 1.3vw;
+  font-weight: 300;
+}
+
+.page1-content h1 {
+  font-family: Bonny;
+  padding-top: 23vw;
+  font-size: 21vw;
+  margin-left: 5vw;
+}
+
+.page1-content h1 span {
+  font-family: Satoshi;
+  letter-spacing: 4vw;
+}
