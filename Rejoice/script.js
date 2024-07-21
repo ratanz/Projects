@@ -1,3 +1,4 @@
+
 function cursorEffect() {
     var page1Content = document.querySelector(".page1-content")
     var cursor = document.querySelector(".cursor")
@@ -23,3 +24,21 @@ function cursorEffect() {
 }
 
 cursorEffect()
+
+function page2Animation() {
+    gsap.from(".page2 .text2 span", {
+        y: 10,
+        stagger : 0.25,
+        duration: 1,
+        scrollTrigger : {
+            trigger : ".page2",
+            scroller : ".main",
+            start : "top 47%",
+            end : "top 37%",
+            scrub : 2
+        }
+    });
+}
+
+page2Animation()
+

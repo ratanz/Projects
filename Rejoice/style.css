@@ -41,9 +41,9 @@ body {
   transform: translate(-50%, -50%);
 }
 
-#cursor h5 {
-    font-size: 4vw;
-    font-weight: 700;
+#cursor h4 {
+  font-size: 4vw;
+  font-weight: 700;
 }
 
 .page1 video {
@@ -78,12 +78,12 @@ nav {
 
 nav h2 {
   font-size: 1.5vw;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 nav h4 {
   font-size: 1.3vw;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .page1-content h1 {
@@ -98,9 +98,129 @@ nav h4 {
   letter-spacing: 4vw;
 }
 
-
 .page2 {
-    width: 100%;
-    height: 100%;
-    background-color: beige;
+  width: 100%;
+  height: 80vh;
+  background-color: #faf8f3;
+  position: relative;
+  padding: 3vw 2.8vw;
 }
+
+.text1 {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh;
+  padding-top: 2vw;
+}
+
+.text1 p {
+  font-size: 1.8vw;
+  font-family: Satoshi;
+}
+
+.line {
+  background-color: black;
+  width: 100%;
+  height: 0.7px;
+}
+
+.text2 span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vw;
+  line-height: 4vw;
+  letter-spacing: 2px;
+  font-weight: 500;
+  padding: 2vw;
+  font-family: Satoshi;
+}
+
+.page3 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #faf8f3;
+  position: relative;
+  padding: 3vw;
+}
+
+.page3-top {
+  text-align: center;
+}
+
+.page3-top h4 {
+  margin-bottom: 1vw;
+  font-size: 1vw;
+  font-weight: 500;
+  font-family: Satoshi;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.page3-top span {
+  font-size: 0.8vw;
+  letter-spacing: 2px;
+  padding: 4px 10px;
+  background-color: #252525;
+  color: white;
+  border-radius: 10px;
+}
+
+.page3-top h2 {
+  font-size: 3vw;
+  font-weight: 500;
+  font-family: Satoshi;
+}
+
+.page3-elements {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8vw;
+  background-color: #faf8f3;
+}
+
+.page3-elements .box {
+  height: 100%;
+  width: 32.5%;
+  /* background-color: beige; */
+  position: relative;
+}
+
+.page3-elements .box video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page3-elements .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: all linear 0.5s;
+  object-position: center;
+}
+
+.page3-elements .box span img {
+  position: absolute;
+  object-fit: contain;
+  object-position: center;
+  width: 10vw;
+  left: 10vw;
+  top: 15vw;
+}
+
+.page3-elements .box:hover img {
+  opacity: 0;
+}
+
+.page3-elements .box:hover span img {
+  opacity: 1;
+}
+
