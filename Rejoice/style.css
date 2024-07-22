@@ -184,9 +184,43 @@ nav h4 {
   background-color: #faf8f3;
 }
 
+.page3 .page3-text  {
+  display: flex;
+  justify-content: space-between;
+  /* background: #000; */
+  margin-top: 10vw;
+  font-size: 2vw;
+}
+
+.page3 .page3-text2 {
+  margin-top: 7vw;
+  font-size: 2vw;
+  /* background: #000; */
+  margin: 1vw;
+}
+
+.page3-text2 h4{
+  font-family: Satoshi;
+  font-weight: 400;
+}
+
+.page3-text2-part-2 h2 {
+  font-family: Satoshi;
+  padding: 2vw;
+  line-height: 4vw;
+  font-size: 4.3vw;
+  font-weight: 400;
+
+}
+
+.page3-text p {
+  font-family: Satoshi;
+}
+
 .page3-elements .box {
   height: 100%;
   width: 32.5%;
+  margin-top: -15vw;
   /* background-color: beige; */
   position: relative;
 }
@@ -223,4 +257,6 @@ nav h4 {
 .page3-elements .box:hover span img {
   opacity: 1;
 }
+
+
 
