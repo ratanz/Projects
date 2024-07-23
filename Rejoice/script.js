@@ -23,10 +23,6 @@ function cursorEffect() {
     })
 }
 
-cursorEffect()
-
-
-
 function page2Animation() {
     gsap.from(".page2 .text2 span", {
         y: 10,
@@ -42,8 +38,6 @@ function page2Animation() {
     });
 }
 
-page2Animation()
-
 function animatePage4SVG() {
     const page4 = document.querySelector('.page4');
     const circle = page4.querySelector('svg circle');
@@ -56,7 +50,6 @@ function animatePage4SVG() {
         rotation: -90,
         transformOrigin: "center"
     });
-    gsap.set(movingDot, { x: 100, y: 10 }); // Start at top of circle
 
     const tl = gsap.timeline({
         repeat: -1,
@@ -71,5 +64,19 @@ function animatePage4SVG() {
    
 }
 
+function swiperjs(){
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+      autoplay: {
+        delay : 2000,
+        disableOnInteraction: false,
+      }
+      });
+}
 
+cursorEffect()
+page2Animation()
 animatePage4SVG()
+swiperjs()
