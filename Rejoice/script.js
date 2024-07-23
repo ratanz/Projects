@@ -25,6 +25,8 @@ function cursorEffect() {
 
 cursorEffect()
 
+
+
 function page2Animation() {
     gsap.from(".page2 .text2 span", {
         y: 10,
@@ -42,3 +44,32 @@ function page2Animation() {
 
 page2Animation()
 
+function animatePage4SVG() {
+    const page4 = document.querySelector('.page4');
+    const circle = page4.querySelector('svg circle');
+    const movingDot = page4.querySelector('#movingDot');
+
+    // Set initial states
+    gsap.set(circle, { 
+        strokeDasharray: 565.48, // 2 * PI * 90 (circle radius)
+        strokeDashoffset: 565.48,
+        rotation: -90,
+        transformOrigin: "center"
+    });
+    gsap.set(movingDot, { x: 100, y: 10 }); // Start at top of circle
+
+    const tl = gsap.timeline({
+        repeat: -1,
+        defaults: { duration: 5, ease: "linear" }
+    });
+
+    tl.to(circle, { 
+        strokeDashoffset: 0,
+        rotation: 270, // Rotate 360 degrees from -90 to 270
+        transformOrigin: "center"
+    })
+   
+}
+
+
+animatePage4SVG()
