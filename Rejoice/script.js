@@ -42,9 +42,7 @@ function page2Animation() {
 function animatePage4SVG() {
     const page4 = document.querySelector('.page4');
     const circle = page4.querySelector('svg circle');
-    const movingDot = page4.querySelector('#movingDot');
 
-    // Set initial states
     gsap.set(circle, {
         strokeDasharray: 565.48, // 2 * PI * 90 (circle radius)
         strokeDashoffset: 565.48,
@@ -115,16 +113,16 @@ function loaderAnimation(){
 }
 
 function aboutAnimation(){
-    // Add GSAP for finer control if needed
+   
 gsap.fromTo(".bottom-text h1::before",
     {
-        x: "-100%" // Start off-screen to the left
+        x: "-100%" 
     },
     {
-        x: "100%", // End off-screen to the right
-        duration: 0.5, // Animation duration
+        x: "100%", 
+        duration: 0.5, 
         ease: "power1.inOut",
-        paused: true // Initially paused
+        paused: true 
     }
 );
 
@@ -140,23 +138,21 @@ document.querySelector('.bottom-text h1').addEventListener('mouseleave', () => {
 }
 
 function footerAnimation() {
-    // Create a GSAP timeline, initially paused
     let tl = gsap.timeline({ paused: true });
-
-    // Define the animation for the h1 span elements
+    
     tl.from(".footer-content", {
-        y: -90, // Start from 100px down
-        opacity: 0, // Start with opacity 0
-        stagger: 0.7, // Stagger the animation for each span
-        duration: 0.5, // Duration of the animation
+        y: -90, 
+        opacity: 0, 
+        stagger: 0.7, 
+        duration: 0.5,
     });
 
-    // Ensure the animation reverses properly
+    
     tl.to(".bottom-part2 h1 span", {
-        y: 80, // End at original position
-        opacity: 1, // End with full opacity
-        stagger: 0.2, // Stagger the animation for each span
-        duration: 0.1, // Duration of the animation
+        y: 80, 
+        opacity: 1, 
+        stagger: 0.2,  
+        duration: 0.1, 
     });
 
     // Select the footer element
@@ -164,7 +160,7 @@ function footerAnimation() {
 
     // Ensure the element exists
     if (footerElement) {
-        // Add event listeners to play and reverse the animation on hover
+        // event listeners to play and reverse the animation on hover
         footerElement.addEventListener('mouseenter', () => {
             tl.restart(); // Restart the animation on mouse enter
         });
