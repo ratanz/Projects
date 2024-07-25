@@ -144,16 +144,16 @@ function footerAnimation() {
     let tl = gsap.timeline({ paused: true });
 
     // Define the animation for the h1 span elements
-    tl.from(".footer .bottom-part2 h1 span", {
-        y: -80, // Start from 100px down
+    tl.from(".footer-content", {
+        y: -90, // Start from 100px down
         opacity: 0, // Start with opacity 0
-        stagger: 0.2, // Stagger the animation for each span
-        duration: 0.1, // Duration of the animation
+        stagger: 0.7, // Stagger the animation for each span
+        duration: 0.5, // Duration of the animation
     });
 
     // Ensure the animation reverses properly
-    tl.to(".footer .bottom-part2 h1 span", {
-        y: 0, // End at original position
+    tl.to(".bottom-part2 h1 span", {
+        y: 80, // End at original position
         opacity: 1, // End with full opacity
         stagger: 0.2, // Stagger the animation for each span
         duration: 0.1, // Duration of the animation

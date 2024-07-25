@@ -391,7 +391,6 @@ nav h4 {
   left: 0; /* Move to fill the width of the parent on hover */
 }
 
-
 .loader {
   height: 100%;
   width: 100%;
@@ -418,7 +417,7 @@ nav h4 {
 }
 
 .footer {
-  height: 60vw;
+  height: 58vw;
   width: 100%;
   position: relative;
   background-color: #090909;
@@ -479,12 +478,12 @@ button:hover {
   margin-bottom: 10px;
 }
 
-.social-links a {
+/* .social-links a {
   text-decoration: none;
   color: white;
-}
+} */
 
-.main-links a {
+.main-links .social-links a {
   color: white;
   text-decoration: none;
 }
@@ -519,8 +518,6 @@ button:hover {
 .bottom-part2 {
   display: flex;
   justify-content: center;
-  font-size: 9.5vw;
-  margin-top: -2vw;
   z-index: 305;
   flex-direction: row;
 }
@@ -528,6 +525,8 @@ button:hover {
 .bottom-part2 h1 span {
   display: inline-block;
   color: white;
+  font-size: 28vw;
+  line-height: 9vw;
   opacity: 0;
   transition: opacity 0.2s, transform 0.2s;
 }
