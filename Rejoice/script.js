@@ -112,6 +112,44 @@ function loaderAnimation(){
     })
 }
 
+function menuAnimation() {
+    const menuToggle = document.getElementById('menuToggle');
+    const menuToggleClose = document.getElementById('menuToggleClose');
+    const menu = document.querySelector('.menu');
+
+    if (!menuToggle || !menu || !menuToggleClose) {
+        console.error('Menu toggle or menu element not found.');
+        return;
+    }
+
+    function toggleMenu() {
+        menu.classList.toggle('active');
+        console.log('Menu toggled. Current state:', menu.classList.contains('active') ? 'Open' : 'Closed');
+        if (menu.classList.contains('active')) {
+            menuToggleClose.textContent = 'Close';
+        } else {
+            menuToggleClose.textContent = 'Menu';
+        }
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    menuToggleClose.addEventListener('click', toggleMenu);
+
+    document.querySelectorAll('.menu a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleMenu();
+
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
 function aboutAnimation(){
    
 gsap.fromTo(".bottom-text h1::before",
@@ -171,8 +209,10 @@ function footerAnimation() {
     } 
 }
 
+
 loaderAnimation()
 cursorEffect()
+menuAnimation()
 page2Animation()
 aboutAnimation()
 footerAnimation()
