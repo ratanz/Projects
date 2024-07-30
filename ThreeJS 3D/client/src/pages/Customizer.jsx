@@ -31,7 +31,6 @@ const Customizer = () => {
     const generateTabContent = () => {
         switch (activeEditorTab) {
             case "colorpicker":
-                console.log("Rendering ColorPicker");
                 return <ColorPicker />
             case "filepicker":
                 return <FilePicker
